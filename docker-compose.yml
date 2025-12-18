@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  screeps:
+    image: yz89122/screeps
+    container_name: screeps-server
+    ports:
+      - "21025:21025" # Game port
+      - "21026:21026" # CLI port
+    environment:
+      - STEAM_API_KEY=D0ED1581F3FF791A73917BE048157EF8
+      - SERVER_PASSWORD=
+    volumes:
+      - ./screeps-data:/screeps
+      - ./.screepsrc:/app/.screepsrc:ro
+    restart: unless-stopped

@@ -2,3 +2,16 @@
 node_modules
 cwd
 build.bat
+
+# Generated server files
+assets/
+db.json
+logs/
+screeps-data/
+example-mods/
+mods.json
+steam_appid.txt
+
+# Environment-specific files
+.screepsrc
+.python-version
