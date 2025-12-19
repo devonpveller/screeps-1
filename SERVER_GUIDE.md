@@ -59,6 +59,27 @@ Once connected to the CLI, you can run:
 - `storage.db.users.find()` - List all users
 - `storage.db.rooms.find()` - List all rooms
 
+## Accessing Console Logs
+
+### Web Interface (Recommended)
+Open in your browser:
+- **Local:** `http://localhost:21025`
+- **Network:** `http://192.168.1.160:21025`
+
+Log in with your account and view the console panel for all `console.log()` output from your scripts.
+
+### Via CLI
+```bash
+docker exec -it screeps-server screeps cli
+```
+Then run:
+```javascript
+storage.db['users.console'].find({user: 'YOUR_USER_ID'})
+```
+
+### In Steam Client
+When connected to the server via Steam client, the console panel will display your script output in real-time.
+
 ## Configuration
 
 The server configuration is stored in `.screepsrc` file with:
